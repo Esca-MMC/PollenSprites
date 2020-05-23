@@ -17,7 +17,7 @@ namespace PollenSprites
     /// <remarks> This subclass copies all of its contents from Ghost, except those added/overridden inside this class.</remarks>
     public class PollenSprite : Ghost
     {
-        /// <summary>The readable version of this monster's name.</summary>
+        /// <summary>The readable version of this monster's name. Needs to match the address of its spritesheet, as in "Characters/Monsters/Pollen Sprite".</summary>
         private static readonly string customName = "Pollen Sprite";
 
         /// <summary>The color used by some of this monster's visual effects.</summary>
@@ -31,7 +31,7 @@ namespace PollenSprites
         protected bool turningRight = default(bool);
 
         /// <summary>Creates an non-functional instance of this monster for use by certain Stardew methods.</summary>
-        /// <remarks>
+        /// <remarks>This should not be used by mods to create new monsters, as it avoids some necessary settings and methods.</remarks>
         public PollenSprite()
             : base() //call the default Ghost constructor
         {
@@ -40,7 +40,7 @@ namespace PollenSprites
         /// <summary>Creates a new instance of this monster class.</summary>
         /// <param name="position">The x,y coordinates of this monster's location.</param>
         /// <remarks>
-        /// Farm Type Manager calls this constructor (i.e. the constructor that has a Vector2 parameter and no others) when it creates a custom monster from another mod.
+        /// Farm Type Manager calls this constructor (i.e. the constructor with a Vector2 parameter and no others) when it creates a custom monster from another mod.
         /// </remarks>
         public PollenSprite(Vector2 position)
             : base(position, customName) //call the Ghost class's "position, name" constructor
@@ -90,10 +90,10 @@ namespace PollenSprites
         /// </remarks>
         public override void shedChunks(int number, float scale)
         {
-            this.currentLocation.localSound("leafrustle");
+            this.currentLocation.localSound("leafrustle"); //play the leaf rustling sound effect
             GameLocation currentLocation = this.currentLocation;
             string textureName = (string)((NetFieldBase<string, NetString>)this.Sprite.textureName);
-            Rectangle sourcerectangle = new Rectangle(0, 96, 16, 16);
+            Rectangle sourcerectangle = new Rectangle(0, 96, 16, 16); //use a different y value for this monster's custom spritesheet
             int sizeOfSourceRectSquares = 8;
             Rectangle boundingBox = this.GetBoundingBox();
             int x = boundingBox.Center.X;
@@ -107,11 +107,12 @@ namespace PollenSprites
 
         /// <summary>This override is a modified copy of the DustSpirit version.</summary>
         /// <remarks>
+        /// * A leaf rustle sound was added.
         /// * The temporary sprites were modified to use this monster's preset effect color.
         /// </remarks>
         protected override void localDeathAnimation()
         {
-            this.currentLocation.localSound("leafrustle");
+            this.currentLocation.localSound("leafrustle"); //play the leaf rustling sound effect
             this.currentLocation.temporarySprites.Add(new TemporaryAnimatedSprite(50, this.Position, effectColor, 10, false, 100f, 0, -1, -1f, -1, 0));
             this.currentLocation.temporarySprites.Add(new TemporaryAnimatedSprite(50, this.Position + new Vector2((float)Game1.random.Next(-32, 32), (float)Game1.random.Next(-32, 32)), effectColor, 10, false, 100f, 0, -1, -1f, -1, 0)
             {
