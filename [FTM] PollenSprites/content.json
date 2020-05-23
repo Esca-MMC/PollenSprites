@@ -12,7 +12,7 @@
         "MonsterTypes": [
           {
             "MonsterName": "PollenSprites.PollenSprite",
-            "Settings": {"damage": 5}
+            "Settings": {}
           }
         ],
         "UniqueAreaID": "Pollen Sprites (Farm)",
@@ -142,6 +142,43 @@
           "EndTime": 1800,
           "MinimumTimeBetweenSpawns": 30,
           "MaximumSimultaneousSpawns": 3,
+          "OnlySpawnIfAPlayerIsPresent": false,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "Years": [],
+          "Seasons": ["Spring"],
+          "Days": [],
+          "WeatherYesterday": [],
+          "WeatherToday": ["Windy"],
+          "WeatherTomorrow": [],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": 1
+      },
+	  {
+        "MonsterTypes": [
+          {
+            "MonsterName": "PollenSprites.PollenSprite",
+            "Settings": {}
+          }
+        ],
+        "UniqueAreaID": "Pollen Sprites (Railroad)",
+        "MapName": "Railroad",
+        "MinimumSpawnsPerDay": 4,
+        "MaximumSpawnsPerDay": 8,
+        "IncludeTerrainTypes": [
+          "All"
+        ],
+        "ExcludeTerrainTypes": [],
+        "IncludeCoordinates": [],
+        "ExcludeCoordinates": [],
+        "StrictTileChecking": "Maximum",
+        "SpawnTiming": {
+          "StartTime": 600,
+          "EndTime": 1800,
+          "MinimumTimeBetweenSpawns": 30,
+          "MaximumSimultaneousSpawns": 1,
           "OnlySpawnIfAPlayerIsPresent": false,
           "SpawnSound": ""
         },
