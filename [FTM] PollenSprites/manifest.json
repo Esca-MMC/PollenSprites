@@ -5,7 +5,7 @@
    "Description": "Spawns Pollen Sprites in various locations on windy days in spring.",
    "UniqueID": "Esca.PollenSpritesFTM",
    "MinimumApiVersion": "3.0.0",
-   "UpdateKeys": [],
+   "UpdateKeys": ["Nexus:6419", "GitHub:Esca-MMC/PollenSprites", "ModDrop:790268"],
    "ContentPackFor": {
       "UniqueID": "Esca.FarmTypeManager",
       "MinimumVersion": "1.10.0"
