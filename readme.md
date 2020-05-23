@@ -1,5 +1,5 @@
 # Pollen Sprites
-A mod for the game Stardew Valley, adding a new type of monster called a Pollen Sprite. They appear on windy days in spring, float around the player harmlessly, and sometimes drop random seeds when defeated.
+A mod for the game Stardew Valley, adding a new type of monster called a Pollen Sprite. They appear on windy days in spring, float around players harmlessly, and sometimes drop random seeds when defeated.
 
 ## Contents
 * [Installation](#installation)
@@ -11,6 +11,8 @@ A mod for the game Stardew Valley, adding a new type of monster called a Pollen 
 2. **Install the latest version of [Farm Type Manager](https://www.nexusmods.com/stardewvalley/mods/3231).**
 3. **Download Pollen Sprites** from [the Releases page on GitHub](https://github.com/Esca-MMC/PollenSprites/releases), Nexus Mods, or ModDrop.
 4. **Unzip Pollen Sprites** into the `Stardew Valley\Mods` folder.
+
+Note for multiplayer: All players must have these mods installed. If only the host has the mods, other players will encounter SMAPI errors and be unable to see/interact with pollen sprites.
 
 ## Customization
 
