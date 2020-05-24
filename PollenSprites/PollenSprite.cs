@@ -48,29 +48,21 @@ namespace PollenSprites
             HideShadow = true; //hide this monster's shadow, preventing a "double shadow" bug in most game locations
             Scale = (float)Game1.random.Next(70, 91) / 100; //randomly choose a size from 70-90%
 
-            if (Game1.random.NextDouble() < 0.1) //10% chance
+            if (Game1.random.NextDouble() < ModEntry.ModConfig.SeedDropChances.MixedSeeds) //if mixed seeds should be dropped
             {
-                switch (Game1.random.Next(0, 6)) //based on a random number
-                {
-                    case 0:
-                        objectsToDrop.Add(429); //jazz seeds
-                        break;
-                    case 1:
-                        objectsToDrop.Add(427); //tulip bulb
-                        break;
-                    case 2:
-                        objectsToDrop.Add(453); //poppy seeds
-                        break;
-                    case 3:
-                        objectsToDrop.Add(455); //spangle seeds
-                        break;
-                    case 4:
-                        objectsToDrop.Add(431); //sunflower seeds
-                        break;
-                    case 5:
-                        objectsToDrop.Add(425); //fairy seeds
-                        break;
-                }
+                objectsToDrop.Add(SeedManager.MixedSeeds); //add mixed seeds to this monster's drop list
+            }
+
+            if (Game1.random.NextDouble() < ModEntry.ModConfig.SeedDropChances.FlowerSeeds) //if flower seeds should be dropped
+            {
+                int randomFlowerSeed = SeedManager.FlowerSeeds[Game1.random.Next(0, SeedManager.FlowerSeeds.Count)]; //get a random flower seed ID
+                objectsToDrop.Add(randomFlowerSeed); //add the flower seed to this monster's drop list
+            }
+
+            if (Game1.random.NextDouble() < ModEntry.ModConfig.SeedDropChances.AllSeeds) //if entirely random seeds should be dropped
+            {
+                int randomSeed = SeedManager.AllSeeds[Game1.random.Next(0, SeedManager.AllSeeds.Count)]; //get a random seed ID
+                objectsToDrop.Add(randomSeed); //add the random seed to this monster's drop list
             }
         }
 

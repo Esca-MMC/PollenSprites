@@ -12,11 +12,30 @@ using StardewValley.Monsters;
 
 namespace PollenSprites
 {
+    /// <summary>The class representing this mod to SMAPI and other mods.</summary>
     public class ModEntry : Mod
     {
+        /// <summary>This mod's config.json file settings.</summary>
+        public static ModConfig ModConfig { get; set; } = null;
+
+        /// <summary>This mod's entry point.</summary>
         public override void Entry(IModHelper helper)
         {
-            //do nothing; currently, this mod only implements the PollenSprite class, allowing it to be accessed by Farm Type Manager's reflection code
+            try
+            {
+                ModConfig = helper.ReadConfig<ModConfig>(); //try to load config.json
+            }
+            catch (Exception ex)
+            {
+                Monitor.Log($"Failed to load config.json file. The default settings will be used instead.", LogLevel.Warn);
+                Monitor.Log($"Auto-generated error message:", LogLevel.Warn);
+                Monitor.Log(ex.Message, LogLevel.Warn);
+            }
+
+            if (ModConfig == null) //if config.json didn't load
+                ModConfig = new ModConfig(); //use the default version
+
+            helper.Events.GameLoop.ReturnedToTitle += SeedManager.GameLoop_ReturnedToTitle_ClearAllSeedsList; //add SeedManager's event to SMAPI
         }
     }
 }
