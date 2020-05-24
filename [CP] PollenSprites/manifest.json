@@ -1,7 +1,7 @@
 {
    "Name": "[CP] Pollen Sprites",
    "Author": "Esca",
-   "Version": "1.0.0",
+   "Version": "1.1.0",
    "Description": "Loads the custom spritesheet used by the Pollen Sprite monster type.",
    "UniqueID": "Esca.PollenSpritesCP",
    "MinimumApiVersion": "3.0.0",

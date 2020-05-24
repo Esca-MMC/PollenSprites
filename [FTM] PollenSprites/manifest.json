@@ -1,7 +1,7 @@
 {
    "Name": "[FTM] Pollen Sprites",
    "Author": "Esca",
-   "Version": "1.0.0",
+   "Version": "1.1.0",
    "Description": "Spawns Pollen Sprites in various locations on windy days in spring.",
    "UniqueID": "Esca.PollenSpritesFTM",
    "MinimumApiVersion": "3.0.0",
