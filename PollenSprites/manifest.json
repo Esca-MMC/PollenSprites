@@ -6,7 +6,7 @@
   "UniqueID": "Esca.PollenSprites",
   "EntryDll": "PollenSprites.dll",
   "MinimumApiVersion": "3.0.0",
-  "UpdateKeys": ["Nexus:6419", "GitHub:Esca-MMC/PollenSprites", "ModDrop:790268"],
+  "UpdateKeys": ["Nexus:6149", "GitHub:Esca-MMC/PollenSprites", "ModDrop:790268"],
   "Dependencies": [
 	   {
 		  "UniqueID": "Esca.PollenSpritesCP"
