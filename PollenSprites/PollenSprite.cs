@@ -109,11 +109,12 @@ namespace PollenSprites
         /// <remarks>
         /// * A leaf rustle sound was added.
         /// * The temporary sprites were modified to use this monster's preset effect color.
+        /// * The temporary sprites' texture row numbers were changed to use a leaf animation.
         /// </remarks>
         protected override void localDeathAnimation()
         {
             this.currentLocation.localSound("leafrustle"); //play the leaf rustling sound effect
-            this.currentLocation.temporarySprites.Add(new TemporaryAnimatedSprite(50, this.Position, effectColor, 10, false, 100f, 0, -1, -1f, -1, 0));
+            this.currentLocation.temporarySprites.Add(new TemporaryAnimatedSprite(50, this.Position, effectColor, 10, false, 100f, 0, -1, -1f, -1, 0)); //use animation row 50 (leaf animation used by weeds) for each sprite
             this.currentLocation.temporarySprites.Add(new TemporaryAnimatedSprite(50, this.Position + new Vector2((float)Game1.random.Next(-32, 32), (float)Game1.random.Next(-32, 32)), effectColor, 10, false, 100f, 0, -1, -1f, -1, 0)
             {
                 delayBeforeAnimationStart = 150,
