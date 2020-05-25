@@ -14,6 +14,26 @@ A mod for the game Stardew Valley, adding a new type of monster called a Pollen 
 
 Note for multiplayer: All players must have these mods installed. If only the host has the mods, other players will encounter SMAPI errors and be unable to see/interact with pollen sprites.
 
+## Options
+
+Pollen Sprites have some optional "allergy" effects and customizable seed drop chances. To edit these options:
+
+1. **Run the game** using SMAPI. This will generate the mod's **config.json** file in the `Stardew Valley\Mods\PollenSprites` folder.
+2. **Exit the game** and open the **config.json** file with any text editing program.
+
+This mod also supports [spacechase0](https://github.com/spacechase0)'s [Generic Mod Config Menu](https://spacechase0.com/mods/stardew-valley/generic-mod-config-menu/) (GMCM). Users with that mod will be able to change config.json settings from Stardew's main menu.
+
+The available settings are:
+
+Name | Valid settings | Description
+-----|----------------|------------
+EnableSlowDebuff | true or **false** | If true, Pollen Sprites will apply a slow effect when they touch you. In multiplayer, this option only affects you.
+EnableEnergyDrain | true or **false** | If true, Pollen Sprites will slowly drain your energy when they touch you. They won't drain your stamina below 10, though. In multiplayer, this option only affects you.
+SeedDropChances | N/A | The settings below decide how often Pollen Sprites drop seeds when defeated. Use 0 for a 0% chance, 0.45 for 45%, 1 for 100%, etc.
+MixedSeeds | A number from 0.0 to 1.0 | The chance that Pollen Sprites will drop mixed seeds.
+FlowerSeeds | A number from 0.0 to 1.0 | The chance that Pollen Sprites will drop random flower seeds.
+AllSeeds | A number from 0.0 to 1.0 | The chance that Pollen Sprites will drop ANY random seeds, including from modded crops.
+
 ## Customization
 
 The number of pollen sprites spawned, their locations, and other settings can be changed by editing the `Stardew Valley\Mods\[FTM] PollenSprites\content.json` file.
