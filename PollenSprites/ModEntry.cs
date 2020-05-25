@@ -40,7 +40,8 @@ namespace PollenSprites
             if (ModConfig == null) //if config.json didn't load
                 ModConfig = new ModConfig(); //use the default version
 
-            helper.Events.GameLoop.ReturnedToTitle += SeedManager.GameLoop_ReturnedToTitle_ClearAllSeedsList; //add SeedManager's event to SMAPI
+            helper.Events.GameLoop.GameLaunched += GMCM.EnableGMCM; //enable GMCM's compatibility event
+            helper.Events.GameLoop.ReturnedToTitle += SeedManager.GameLoop_ReturnedToTitle_ClearAllSeedsList; //enable SeedManager's list-clearing event
         }
     }
 }
