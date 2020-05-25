@@ -33,7 +33,7 @@ EnableEnergyDrain | true or **false** | If true, Pollen Sprites will slowly drai
 SeedDropChances | N/A | The settings below decide how often Pollen Sprites drop seeds when defeated. Use 0 for a 0% chance, 0.45 for 45%, 1 for 100%, etc. In multiplayer, only the host's settings are used.
 MixedSeeds | A number from 0.0 to 1.0 (default **0.45**) | The chance that Pollen Sprites will drop mixed seeds.
 FlowerSeeds | A number from 0.0 to 1.0 (default **0.10**) | The chance that Pollen Sprites will drop random flower seeds.
-AllSeeds | A number from 0.0 to 1.0 (defualt **0**) | The chance that Pollen Sprites will drop ANY random seeds, including from modded crops.
+AllSeeds | A number from 0.0 to 1.0 (default **0**) | The chance that Pollen Sprites will drop ANY random seeds, including from modded crops.
 
 ## Customization
 
