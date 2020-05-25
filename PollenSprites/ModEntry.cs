@@ -15,12 +15,17 @@ namespace PollenSprites
     /// <summary>The class representing this mod to SMAPI and other mods.</summary>
     public class ModEntry : Mod
     {
+        /// <summary>This mod's current instance, used for easy access by other classes.</summary>
+        public static Mod Instance { get; set; } = null;
+
         /// <summary>This mod's config.json file settings.</summary>
         public static ModConfig ModConfig { get; set; } = null;
 
         /// <summary>This mod's entry point.</summary>
         public override void Entry(IModHelper helper)
         {
+            Instance = this; //set the static instance of this mod
+
             try
             {
                 ModConfig = helper.ReadConfig<ModConfig>(); //try to load config.json
