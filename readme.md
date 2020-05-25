@@ -3,6 +3,7 @@ A mod for the game Stardew Valley, adding a new type of monster called a Pollen 
 
 ## Contents
 * [Installation](#installation)
+* [Options](#options)
 * [Customization](#customization)
 
 ## Installation
