@@ -30,7 +30,7 @@ Name | Valid settings | Description
 -----|----------------|------------
 EnableSlowDebuff | true or **false** | If true, Pollen Sprites will apply a slow effect when they touch you. In multiplayer, this option only affects you.
 EnableEnergyDrain | true or **false** | If true, Pollen Sprites will slowly drain your energy when they touch you. They won't drain your stamina below 10, though. In multiplayer, this option only affects you.
-SeedDropChances | N/A | The settings below decide how often Pollen Sprites drop seeds when defeated. Use 0 for a 0% chance, 0.45 for 45%, 1 for 100%, etc.
+SeedDropChances | N/A | The settings below decide how often Pollen Sprites drop seeds when defeated. Use 0 for a 0% chance, 0.45 for 45%, 1 for 100%, etc. In multiplayer, these use the host's settings.
 MixedSeeds | A number from 0.0 to 1.0 | The chance that Pollen Sprites will drop mixed seeds.
 FlowerSeeds | A number from 0.0 to 1.0 | The chance that Pollen Sprites will drop random flower seeds.
 AllSeeds | A number from 0.0 to 1.0 | The chance that Pollen Sprites will drop ANY random seeds, including from modded crops.
