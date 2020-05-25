@@ -61,6 +61,8 @@ namespace PollenSprites
         }
 
         /// <summary>Whenever the player exits a loaded game, clear the <see cref="AllSeeds"/> list.</summary>
+        /// <remarks>Most mod seem to limit object data changes to when a save is loaded.
+        /// Clearing this data at the title screen should account for those changes.</remarks>
         public static void GameLoop_ReturnedToTitle_ClearAllSeedsList(object sender, ReturnedToTitleEventArgs e)
         {
             AllSeeds = null; //dispose of the existing list, if any
