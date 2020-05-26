@@ -38,7 +38,7 @@ namespace PollenSprites
             api.RegisterSimpleOption(
                 manifest, 
                 "Enable energy drain", 
-                "If this box is checked, Pollen Sprites will slowly drain your energy when they touch you.\nThey won't drain your stamina below 10, though.\nIn multiplayer, this option only affects you.", 
+                "If this box is checked, Pollen Sprites will slowly drain your energy when they touch you (but never below 10 points).\nIn multiplayer, this option only affects you.", 
                 () => ModEntry.ModConfig.EnableEnergyDrain, 
                 (bool val) => ModEntry.ModConfig.EnableEnergyDrain = val
             );
