@@ -62,8 +62,8 @@ namespace PollenSprites
             );
 
             api.RegisterSimpleOption(manifest, 
-                "Flower seeds", 
-                "The chance that Pollen Sprites will drop random flower seeds.\nUse 0 for a 0% chance, 0.45 for 45%, 1 for 100%, etc.", 
+                "Mixed flower seeds", 
+                "The chance that Pollen Sprites will drop mixed flower seeds.\nUse 0 for a 0% chance, 0.45 for 45%, 1 for 100%, etc.", 
                 () => ModEntry.ModConfig.SeedDropChances.FlowerSeeds.ToString(), //read this setting as a string
                 (string val) =>
                 {
@@ -75,7 +75,7 @@ namespace PollenSprites
             api.RegisterSimpleOption(
                 manifest, 
                 "All seeds", 
-                "The chance that Pollen Sprites will drop ANY random seeds, including from modded crops.\nUse 0 for a 0% chance, 0.45 for 45%, 1 for 100%, etc.",
+                "The chance that Pollen Sprites will drop random seeds, including from modded crops.\nUse 0 for a 0% chance, 0.45 for 45%, 1 for 100%, etc.",
                 () => ModEntry.ModConfig.SeedDropChances.AllSeeds.ToString(), //read this setting as a string
                 (string val) =>
                 {
