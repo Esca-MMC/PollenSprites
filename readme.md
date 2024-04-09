@@ -1,5 +1,5 @@
 # Pollen Sprites
-A mod for the game Stardew Valley, adding a new type of monster called a Pollen Sprite. They appear on windy days in spring, float around players harmlessly, and sometimes drop random seeds when defeated.
+A mod for the game Stardew Valley, adding a new type of monster called a Pollen Sprite. They appear on windy days, float around players harmlessly, and sometimes drop random seeds when defeated.
 
 ## Contents
 * [Installation](#installation)

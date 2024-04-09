@@ -1,7 +1,7 @@
 ﻿{
   "Name": "Pollen Sprites",
   "Author": "Esca",
-  "Version": "1.1.1",
+  "Version": "2.0.0",
   "Description": "Adds a new type of monster called a Pollen Sprite.",
   "UniqueID": "Esca.PollenSprites",
   "EntryDll": "PollenSprites.dll",
