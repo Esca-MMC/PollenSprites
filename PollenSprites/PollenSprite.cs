@@ -39,8 +39,33 @@ namespace PollenSprites
             }
         }
 
+        private Color? effectColor = null;
         /// <summary>The color used by some of this monster's visual effects.</summary>
-        public Color EffectColor { get; set; } = new Color(255, 183, 255); //a shade of pink similar to this monster's modded sprite
+        public Color EffectColor
+        {
+            get
+            {
+                if (effectColor == null) //if a color hasn't been selected yet
+                {
+                    GameLocation loc = currentLocation ?? Game1.currentLocation; //try to get this monster's current location, or at least the local player's location
+                    if (loc?.GetSeason() == Season.Fall) //if a location was found and it's fall there
+                    {
+                        effectColor = new Color(246, 97, 76); //red-orange, based on the fall sprite
+                    }
+                    else
+                    {
+                        effectColor = new Color(255, 183, 255); //pink, based on the spring sprite
+                    }
+                }
+
+                return effectColor.Value; //use the cached color
+            }
+
+            set
+            {
+                effectColor = value;
+            }
+        }
 
         /// <summary>The internal name for this monster. Needs to match the name used by its spritesheet, as in "Characters/Monsters/Esca.PollenSprites".</summary>
         protected static string customName = "Esca.PollenSprites";

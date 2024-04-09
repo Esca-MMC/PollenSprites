@@ -4,7 +4,7 @@
 			{
 				"Action": "Load",
 				"Target": "Characters/Monsters/Esca.PollenSprites",
-				"FromFile": "assets/Pollen Sprite.png"
+				"FromFile": "assets/PollenSprite_{{season}}.png"
 			},
 			{
 				"Action": "EditData",
