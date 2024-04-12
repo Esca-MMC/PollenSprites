@@ -107,17 +107,17 @@ namespace PollenSprites
             HideShadow = true; //hide this monster's shadow, preventing a "double shadow" bug in most game locations
             Scale = (float)Game1.random.Next(70, 91) / 100; //randomly choose a size from 70-90%
 
-            if (Game1.random.NextDouble() < ModEntry.ModConfig.SeedDropChances.MixedSeeds) //if mixed seeds should be dropped
+            if (Game1.random.NextSingle() < ModEntry.ModConfig.SeedDropChances.MixedSeeds) //if mixed seeds should be dropped
             {
                 objectsToDrop.Add(SeedManager.MixedSeeds); //add mixed seeds to this monster's drop list
             }
 
-            if (Game1.random.NextDouble() < ModEntry.ModConfig.SeedDropChances.FlowerSeeds) //if flower seeds should be dropped
+            if (Game1.random.NextSingle() < ModEntry.ModConfig.SeedDropChances.FlowerSeeds) //if flower seeds should be dropped
             {
                 objectsToDrop.Add(SeedManager.FlowerSeeds); //add mixed flower seeds to this monster's drop list
             }
 
-            if (Game1.random.NextDouble() < ModEntry.ModConfig.SeedDropChances.AllSeeds) //if entirely random seeds should be dropped
+            if (Game1.random.NextSingle() < ModEntry.ModConfig.SeedDropChances.AllSeeds) //if entirely random seeds should be dropped
             {
                 string randomSeed = SeedManager.AllSeeds[Game1.random.Next(0, SeedManager.AllSeeds.Count)]; //get a random seed ID
                 objectsToDrop.Add(randomSeed); //add the random seed to this monster's drop list

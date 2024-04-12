@@ -27,10 +27,10 @@ namespace PollenSprites
     public class SeedDropChances
     {
         /// <summary>The chance that <see cref="SeedManager.MixedSeeds"/> will be dropped.</summary>
-        public double MixedSeeds { get; set; } = 0.45;
+        public float MixedSeeds { get; set; } = 0.50f;
         /// <summary>The chance that a random seed from <see cref="SeedManager.FlowerSeeds"/> will be dropped.</summary>
-        public double FlowerSeeds { get; set; } = 0.10;
+        public float FlowerSeeds { get; set; } = 0.20f;
         /// <summary>The chance that a random seed from <see cref="SeedManager.AllSeeds"/> will be dropped.</summary>
-        public double AllSeeds { get; set; } = 0.0;
+        public float AllSeeds { get; set; } = 0f;
     }
 }
