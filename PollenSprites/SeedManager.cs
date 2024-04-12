@@ -1,14 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Audio;
-using StardewModdingAPI;
-using StardewModdingAPI.Events;
-using StardewModdingAPI.Utilities;
+﻿using StardewModdingAPI.Events;
 using StardewValley;
-using StardewValley.Monsters;
+using System;
+using System.Collections.Generic;
 
 namespace PollenSprites
 {

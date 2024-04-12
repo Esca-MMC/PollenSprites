@@ -35,8 +35,8 @@ namespace PollenSprites
             );
 
             api.AddBoolOption(
-                manifest, 
-                () => ModEntry.ModConfig.EnableEnergyDrain, 
+                manifest,
+                () => ModEntry.ModConfig.EnableEnergyDrain,
                 (bool val) => ModEntry.ModConfig.EnableEnergyDrain = val,
                 () => "Enable energy drain",
                 () => "If this box is checked, Pollen Sprites will slowly drain your energy when they touch you (but never below 10 points).\nIn multiplayer, this option only affects you."
@@ -49,7 +49,7 @@ namespace PollenSprites
             );
 
             api.AddNumberOption(
-                manifest, 
+                manifest,
                 () => ModEntry.ModConfig.SeedDropChances.MixedSeeds,
                 (float val) => ModEntry.ModConfig.SeedDropChances.MixedSeeds = val,
                 () => "Mixed seeds",

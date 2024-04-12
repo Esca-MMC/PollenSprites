@@ -1,16 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Audio;
-using StardewModdingAPI;
-using StardewModdingAPI.Events;
-using StardewModdingAPI.Utilities;
-using StardewValley;
-using StardewValley.Monsters;
-
-namespace PollenSprites
+﻿namespace PollenSprites
 {
     /// <summary>The set of options available in this mod's config.json file.</summary>
     public class ModConfig
